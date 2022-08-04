@@ -1,0 +1,69 @@
+
+<div class="form-group">
+    
+    <!--Alert component of bootstrap-->
+    <div class="alert alert-info" role="alert">
+        <!--Valid is true if the field doesn’t have validators or all its validators are passing.-->
+      <strong>Valid ? </strong>{{username.valid}} <br>
+      <strong>Invalid ? </strong>{{username.invalid}}<br>
+      <!--A form control is said to be touched if a user focused on the control and then focused on something else.
+    The difference between touched and dirty is that with touched the user doesn’t need to actually change the value of the input control.-->
+      <strong>Touched ? </strong>{{username.touched}}<br>
+      <strong>Untouched ? </strong>{{username.untouched}}<br>
+      <!--Dirty property is true if a user changes the value of form control.-->
+      <strong>Dirty ? </strong>{{username.dirty}}<br>
+      <!--Pristine property is true if a user doesn’t change the value of form control, otherwise, it is false.-->
+      <strong>Pristine ? </strong>{{username.pristine}}<br>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+      <h4 class="card-title">ADD DETAILS (Model Driven Form)</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <form [formGroup]="myForm" novalidate>
+            <div class="form-group">
+              <label>Username</label>
+              
+              <input type="text" class="form-control" placeholder="Enter your username" formControlName="username" [ngClass]="{'is-invalid': username.errors && (username.touched || username.dirty), 'is-valid':username.valid}"   >
+              
+              <div class="invalid-feedback" >
+                 
+                <strong *ngIf="username.errors?.required">Name is required</strong>
+                <strong *ngIf="username.errors?.minlength">Name length must be greater than {{username.errors?.minlength.requiredLength}} characters. {{username.errors?.minlength.requiredLength - username.errors?.minlength.actualLength}} more characters required. </strong>
+              </div>
+            </div>
+            <div class="form-group ">
+              <label>Password</label>
+              <input type="password" class="form-control" placeholder="Enter your password" formControlName="password" [ngClass]="{'is-invalid': password.errors && (password.touched || password.dirty), 'is-valid':password.valid}"   >
+              <div class="invalid-feedback" >
+                
+              <strong *ngIf="password.errors?.required">Password is required</strong>
+              <strong *ngIf="password.errors?.pattern">Pattern does not match</strong>
+            </div>
+            </div>
+        
+            <div class="form-group ">
+              <label>Course Type</label>
+              <select class="form-control" formControlName="courseType" [ngClass]="{'is-invalid': courseType.errors && (courseType.touched || courseType.dirty), 'is-valid':courseType.valid}" >
+                <option *ngFor="let p of courseTypes" [value]="p">{{p}}</option>
+              </select>
+              <div class="invalid-feedback" >
+                  <strong>Select Course Type</strong>    
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="onClick()">Submit</button>&nbsp;
+            <button class="btn btn-default"><a href="https://razorpay.com/payment-link/plink_K1FrBU85A2zCJr">PAY COURSE</a></button>
+          </form>
+        </div>
+  
+        <div class="col-md-6">
+          <label>
+            <strong>myForm : JSON</strong>
+          </label>
+          <pre class="alert alert-info">{{myForm.value | json}}</pre>
+        </div>
+      </div>  
+    </div>
+  </div>
