@@ -1,7 +1,39 @@
-.row {
-    background-color: lightblue;
-}
+
 img{
-    height:200px;
-    width:200px;
+    height:100px;
+    width: 1000px;
+
 }
+
+  .myname{
+    font-size: 50px;
+  }
+  
+  .text-end{
+    padding-top: 100px
+  }
+
+  .student{
+    font-size: 20px;
+  }
+  .contact-details { 
+    font-family: Consolas,monaco,monospace; 
+  }
+  
+  .card_1 {
+    margin-top: 50 px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: lightblue;
+  }
+  
+  .card-header{
+    background-image: url('https://www.pngkit.com/png/full/4-46186_abstract-png-high-quality-image-yosoo-oil-splatter.png');
+  }
+  
+  .card{
+    margin-top: 50 px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: lightgray;
+  }

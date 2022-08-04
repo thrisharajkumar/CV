@@ -13,22 +13,21 @@ export class SignupComponent implements OnInit {
 
   onClick() 
   {
-        alert("Request Sent")
+        alert("Contal Details Sent!")
   }
 
-  courseTypes = ['Dotnet', 'Java','Python','PHP'];
+  courseTypes = ['Java Developer', 'Angular Web Developer','Python Developer','Intern'];
   myForm: FormGroup | any;
   username: FormControl | any;
-  password: FormControl | any;
+  tel: FormControl | any;
   courseType: FormControl | any;
   ngOnInit() {
     this.username = new FormControl('', [Validators.required, Validators.minLength(5)]);
-    this.password = new FormControl('', [Validators.required, Validators.pattern('[0-9a-zA-Z]*'),Validators.minLength(7)]);
+    this.tel= new FormControl( '', [Validators.required, Validators.minLength(10)]), Validators.pattern(/^[0-9]\d*$/);
     this.courseType = new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z]*')]);
     this.myForm = new FormGroup({
-      'username': this.username,
-      'password': this.password,
-      'courseType': this.courseType
+      'name': this.username,
+      'Job': this.courseType
     });
   }
 }

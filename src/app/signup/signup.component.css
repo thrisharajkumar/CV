@@ -1,0 +1,20 @@
+.contact-details { 
+	font-family: Consolas,monaco,monospace; 
+}
+
+.card_1 {
+	margin-top: 50 px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background-color: lightblue;
+}
+
+.card-header{
+	background-color: grey;
+}
+.card{
+	margin-top: 50 px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background-color: lightgray;
+}

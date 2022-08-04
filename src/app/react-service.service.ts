@@ -9,53 +9,18 @@ export class ReactServiceService {
   angular:Angular[]=
   [
     {
-      id:100,
-      name:"Jhonny",
-      designation:"Developer",
-      phone:"569348783",
+      id:1,
+      name:"LINKEDIN LEARNING",
+      designation:"HTML ESSENTIAL TRAINING CERTIFICATION",
+      phone:""
     },
     {
       id:101,
-      name:"Daisy",
-      designation:"Designer",
-      phone:"569343783"
+      name:"LINKEDIN LEARNING",
+      designation:"PYTHON PROGRAMMING FOR NON-PROGRAMMERS",
+      phone:""
     },
-    {
-      id:102,
-      name:"Dwayne",
-      designation:"Developer",
-      phone:"432348783"
-    },
-    {
-      id:103,
-      name:"Anson",
-      designation:"Developer",
-      phone:"569348783",
-    },
-    {
-      id:104,
-      name:"Antony",
-      designation:"Designer",
-      phone:"569343783"
-    },
-    {
-      id:105,
-      name:"Carly",
-      designation:"Developer",
-      phone:"432348783"
-    },
-    {
-      id:106,
-      name:"Lea",
-      designation:"Designer",
-      phone:"569343783"
-    },
-    {
-      id:107,
-      name:"Murphy",
-      designation:"Developer",
-      phone:"432348783"
-    }
+    
   ]
 
   public getdetails():any{
